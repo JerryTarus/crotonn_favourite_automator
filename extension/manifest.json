@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Crotonn Favourite Automator",
+    "version": "0.1",
+    "description": "This tool helps you to Automate favoriting designs on the Redbubble platform...",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "host_permissions": ["https://*.redbubble.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon-128.png"
+    },
+    "icons": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  }
+  
