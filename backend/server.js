@@ -1,19 +1,23 @@
 const express = require("express");
-const { automateFavorites } = require("./automation");
-
 const app = express();
-app.use(express.json());
+const port = 3000;
 
+// Define a route for the root URL ("/")
+app.get("/", (req, res) => {
+  res.send("Welcome to Crotonn Favourite Automator Backend!");
+});
+
+// Define your POST route for automation (already in your code)
 app.post("/start", async (req, res) => {
-  const { keyword, quantity, minDelay, maxDelay } = req.body;
-
   try {
-    await automateFavorites(keyword, quantity, minDelay, maxDelay);
-    res.status(200).json({ message: "Automation completed successfully" });
+    // Replace this with your automation logic
+    res.send("Automation started!");
   } catch (error) {
-    res.status(500).json({ error: "Automation failed", details: error.message });
+    res.status(500).send({ error: "An error occurred while starting automation" });
   }
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
