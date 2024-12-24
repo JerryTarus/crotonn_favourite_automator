@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crotonn Favorite Automator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Crotonn Favorite Automator</h1>
+  <form id="settings-form">
+    <label for="keyword">Keyword:</label>
+    <input type="text" id="keyword" required />
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" required />
+
+    <label for="minDelay">Min Delay (ms):</label>
+    <input type="number" id="minDelay" min="1000" required />
+
+    <label for="maxDelay">Max Delay (ms):</label>
+    <input type="number" id="maxDelay" min="1000" required />
+
+    <button type="submit">Start Automation</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
